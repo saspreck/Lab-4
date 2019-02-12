@@ -44,9 +44,13 @@ public class AnimalTest
     public void equalsTest() throws AssertException{
     	Animal animal5 = new Animal();
     	Animal animal6 = new Animal("blue", "Jack", 10.2, 5.3);
+    	Animal animal7 = animal6;
+    	Equipment fork = new Equipment("fork/1, 0.5, 2.4, a fork for eating");
     	
     	Assert.assertEquals(false, animal5.equals(animal6));
     	Assert.assertEquals(true, animal6.equals(animal6));
+    	Assert.assertEquals(true, animal6.equals(animal7));
+    	Assert.assertEquals(false, animal6.equals(fork));
     	
     }
     

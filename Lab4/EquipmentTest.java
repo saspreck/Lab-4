@@ -26,9 +26,12 @@ public class EquipmentTest{
     	Equipment sword = new Equipment("Sword/1, 5.2, 250.4, a sword for fighting");
     	Equipment knife = new Equipment("Knife/1, 1.2, 26.3, a knife for fighting");
     	Equipment knife2 = new Equipment("Knife/1, 1.2, 26.3, a knife for fighting");
+    	Animal animal1 = new Animal("blue", "George", 198.5, 69.5);
+    	
     	
     	Assert.assertEquals(false, sword.equals(knife));
     	Assert.assertEquals(true, knife.equals(knife2));
+    	Assert.assertEquals(false, sword.equals(animal1));
     	
     }
     
